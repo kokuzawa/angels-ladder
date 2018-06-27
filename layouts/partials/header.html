@@ -40,6 +40,7 @@
     <script type="text/javascript">stLight.options({publisher: '{{ . }}', doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
   {{ end }}
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </head>
 
@@ -58,10 +59,11 @@
       </div>
       <div id="social" class="col span_6">
         <ul>
-          {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
-          {{ with .Site.Params.facebook }}<li><a href="{{ . }}" target="_blank">Facebook</a></li>{{ end }}
-          {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">GitHub</a></li>{{ end }}
-          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml" target="_blank">RSS</a></li>{{ end }}
+          <li><a href="/tags/"><i class="fas fa-tag fa-2x"></i></a></li>
+          {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>{{ end }}
+          {{ with .Site.Params.facebook }}<li><a href="{{ . }}" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>{{ end }}
+          {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank"><i class="fab fa-github-alt fa-2x"></i></a></li>{{ end }}
+          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml" target="_blank"><i class="fas fa-rss-square fa-2x"></i></a></li>{{ end }}
         </ul>
       </div>
     </div>
